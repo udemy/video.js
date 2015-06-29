@@ -36,11 +36,8 @@ class TextTrackButton extends MenuButton {
 
   // Create a menu item for each text track
   createItems(items=[]) {
-    // Add a label
-    items.push(new OffTextTrackMenuItem(this.player_, { 'kind': this.kind_, 'label': 'Closed captions' }));
-
     // Add an OFF menu item to turn all tracks off
-    items.push(new OffTextTrackMenuItem(this.player_, { 'kind': this.kind_, 'label': 'None' }));
+    items.push(new OffTextTrackMenuItem(this.player_, { 'kind': this.kind_ }));
 
     let tracks = this.player_.textTracks();
 
